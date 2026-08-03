@@ -1,0 +1,17 @@
+# Cloudflare Worker settings. The build (nitro) generates the full deploy config
+# at dist/server/wrangler.json and points wrangler at it via .wrangler/deploy/config.json.
+name = "hyper-wireless"
+account_id = "8abab5aa5da77f73d3f66cd4e2f5432d"
+compatibility_date = "2025-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Serve the site on your domain. Both records must exist in the zone as
+# proxied (orange-cloud) A/AAAA/CNAME records - Cloudflare needs a DNS entry to
+# attach the Worker route to. 192.0.2.1 (AAAA 100::) is the standard placeholder.
+[[routes]]
+pattern = "hyper-wireless.com/*"
+zone_id = "5e684f2fecf1ba024d7fc3e361ca51e6"
+
+[[routes]]
+pattern = "www.hyper-wireless.com/*"
+zone_id = "5e684f2fecf1ba024d7fc3e361ca51e6"
