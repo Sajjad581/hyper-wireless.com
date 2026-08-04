@@ -18,6 +18,7 @@ import { Route as RegisterRouteImport } from './routes/register'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as WorkflowRouteImport } from './routes/workflow'
 import { Route as AppIndexRouteImport } from './routes/app.index'
+import { Route as AppAeonTestRouteImport } from './routes/app.aeon-test'
 import { Route as AppApiRouteImport } from './routes/app.api'
 import { Route as AppBillingRouteImport } from './routes/app.billing'
 import { Route as AppBuildsRouteImport } from './routes/app.builds'
@@ -79,6 +80,11 @@ const WorkflowRoute = WorkflowRouteImport.update({
 const AppIndexRoute = AppIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppAeonTestRoute = AppAeonTestRouteImport.update({
+  id: '/aeon-test',
+  path: '/aeon-test',
   getParentRoute: () => AppRoute,
 } as any)
 const AppApiRoute = AppApiRouteImport.update({
@@ -176,6 +182,7 @@ export interface FileRoutesByFullPath {
   '/register': typeof RegisterRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/workflow': typeof WorkflowRoute
+  '/app/aeon-test': typeof AppAeonTestRoute
   '/app/api': typeof AppApiRoute
   '/app/billing': typeof AppBillingRoute
   '/app/builds': typeof AppBuildsRoute
@@ -203,6 +210,7 @@ export interface FileRoutesByTo {
   '/register': typeof RegisterRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/workflow': typeof WorkflowRoute
+  '/app/aeon-test': typeof AppAeonTestRoute
   '/app/api': typeof AppApiRoute
   '/app/billing': typeof AppBillingRoute
   '/app/builds': typeof AppBuildsRoute
@@ -232,6 +240,7 @@ export interface FileRoutesById {
   '/register': typeof RegisterRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/workflow': typeof WorkflowRoute
+  '/app/aeon-test': typeof AppAeonTestRoute
   '/app/api': typeof AppApiRoute
   '/app/billing': typeof AppBillingRoute
   '/app/builds': typeof AppBuildsRoute
@@ -262,6 +271,7 @@ export interface FileRouteTypes {
     | '/register'
     | '/sitemap.xml'
     | '/workflow'
+    | '/app/aeon-test'
     | '/app/api'
     | '/app/billing'
     | '/app/builds'
@@ -289,6 +299,7 @@ export interface FileRouteTypes {
     | '/register'
     | '/sitemap.xml'
     | '/workflow'
+    | '/app/aeon-test'
     | '/app/api'
     | '/app/billing'
     | '/app/builds'
@@ -317,6 +328,7 @@ export interface FileRouteTypes {
     | '/register'
     | '/sitemap.xml'
     | '/workflow'
+    | '/app/aeon-test'
     | '/app/api'
     | '/app/billing'
     | '/app/builds'
@@ -415,6 +427,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/app/'
       preLoaderRoute: typeof AppIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/aeon-test': {
+      id: '/app/aeon-test'
+      path: '/aeon-test'
+      fullPath: '/app/aeon-test'
+      preLoaderRoute: typeof AppAeonTestRouteImport
       parentRoute: typeof AppRoute
     }
     '/app/api': {
@@ -540,6 +559,7 @@ declare module '@tanstack/react-router' {
 }
 
 interface AppRouteChildren {
+  AppAeonTestRoute: typeof AppAeonTestRoute
   AppApiRoute: typeof AppApiRoute
   AppBillingRoute: typeof AppBillingRoute
   AppBuildsRoute: typeof AppBuildsRoute
@@ -557,6 +577,7 @@ interface AppRouteChildren {
 }
 
 const AppRouteChildren: AppRouteChildren = {
+  AppAeonTestRoute: AppAeonTestRoute,
   AppApiRoute: AppApiRoute,
   AppBillingRoute: AppBillingRoute,
   AppBuildsRoute: AppBuildsRoute,

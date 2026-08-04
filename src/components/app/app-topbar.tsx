@@ -1,4 +1,5 @@
-import { Bell, Search, ChevronDown } from "lucide-react";
+import { Link } from "@tanstack/react-router";
+import { Bell, Search, ChevronDown, LogOut } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -20,7 +21,18 @@ export function AppTopbar() {
           <span className="size-1.5 rounded-full bg-success" /> All systems operational
         </Badge>
         <Button variant="ghost" size="icon" aria-label="Notifications"><Bell className="size-4" /></Button>
+        <Link to="/">
+          <Button
+            variant="outline"
+            size="sm"
+            className="gap-1.5 border-red-500/30 bg-card/60 text-red-400 transition-colors hover:bg-red-500/15 hover:text-red-300"
+          >
+            <LogOut className="size-3.5" />
+            <span>Log Out</span>
+          </Button>
+        </Link>
       </div>
     </header>
   );
 }
+

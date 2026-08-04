@@ -13,6 +13,8 @@ import {
   Settings,
   LifeBuoy,
   Cpu,
+  Radio,
+  LogOut,
 } from "lucide-react";
 import { BrandLogo } from "@/components/brand-logo";
 import { cn } from "@/lib/utils";
@@ -22,6 +24,7 @@ const primary = [
   { to: "/app/projects", label: "Projects", icon: FolderKanban },
   { to: "/app/builds", label: "Build Repository", icon: Package },
   { to: "/app/testing", label: "Testing", icon: FlaskConical },
+  { to: "/app/aeon-test", label: "Aeon Test", icon: Radio },
   { to: "/app/copilot", label: "AI Copilot", icon: Bot },
   { to: "/app/reports", label: "Reports", icon: BarChart3 },
 ] as const;
@@ -76,12 +79,28 @@ export function AppSidebar() {
         <a href="#" className="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm text-muted-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground">
           <LifeBuoy className="size-4" /> Support
         </a>
-        <div className="mt-2 flex items-center gap-2 rounded-md border border-sidebar-border bg-sidebar-accent/40 p-2">
-          <div className="grid size-8 place-items-center rounded-md bg-primary/20 font-mono text-xs text-primary">AR</div>
-          <div className="min-w-0 flex-1 text-xs">
-            <p className="truncate font-medium text-foreground">Alex Rivera</p>
-            <p className="truncate text-muted-foreground">Acme Semiconductor</p>
+        <Link
+          to="/"
+          className="mt-0.5 flex items-center gap-2 rounded-md px-2 py-1.5 text-sm font-medium text-red-400 transition-colors hover:bg-red-500/10 hover:text-red-300"
+        >
+          <LogOut className="size-4" />
+          <span>Log Out</span>
+        </Link>
+        <div className="mt-2 flex items-center justify-between gap-2 rounded-md border border-sidebar-border bg-sidebar-accent/40 p-2">
+          <div className="flex min-w-0 items-center gap-2">
+            <div className="grid size-8 shrink-0 place-items-center rounded-md bg-primary/20 font-mono text-xs text-primary">AR</div>
+            <div className="min-w-0 flex-1 text-xs">
+              <p className="truncate font-medium text-foreground">Alex Rivera</p>
+              <p className="truncate text-muted-foreground">Acme Semiconductor</p>
+            </div>
           </div>
+          <Link
+            to="/"
+            title="Log Out to Main Website"
+            className="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-red-500/15 hover:text-red-400"
+          >
+            <LogOut className="size-4" />
+          </Link>
         </div>
       </div>
     </aside>
