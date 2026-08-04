@@ -1,0 +1,27 @@
+# AEON Cloud
+
+> Cloud-based 3GPP UE certification platform. We ship a digital box, not a physical tester — upload a UE build, run TTCN-3 conformance campaigns on real SDR-backed lanes from a browser.
+
+AEON Cloud is a managed Conformance-Testing-as-a-Service (CTaaS) platform for telecom device makers. Instead of buying and racking a physical tester (Anritsu, Keysight, Rohde & Schwarz), teams sign up, connect their UE build, and execute 3GPP TTCN-3 campaigns remotely against LimeSDR and Ettus B210 backed radio lanes, with an AI Telecom Copilot for failure triage.
+
+## Pages
+
+- [Home](/): Overview of AEON Cloud, the digital testbench for 3GPP UE certification.
+- [Platform](/platform): Architecture, security model, and how cloud SDR testing compares to physical chambers.
+- [Workflow](/workflow): Six-step flow from git push to certification verdict, with CLI examples.
+- [Pricing](/pricing): Plans, usage limits, and FAQ for teams and enterprises.
+- [Docs](/docs): 41 engineering pages — install srsRAN UE, connect an open-source UE, TTCN-3 campaigns, TS 38.523 test selection, CLI/API/SDK reference, Jenkins & GitHub Actions CI, and failure debugging (registration, RRC setup, NAS security mode).
+- [Blog](/blog): Field notes on 3GPP UE certification, TTCN-3, SDR testing, and cloud conformance.
+
+## Blog
+
+- [Digital testbench vs. physical box](/blog/digital-testbench-vs-physical-box): Why cloud SDR replaces racked testers.
+- [Cloud vs. chamber cost breakdown 2026](/blog/cloud-vs-chamber-cost-breakdown-2026): CAPEX vs OpEx economics for UE certification.
+- [TTCN-3 in the cloud](/blog/ttcn3-in-the-cloud): Running standard TTCN-3 campaigns as a managed service.
+- [SDR replaces million-dollar testers](/blog/sdr-replaces-million-dollar-testers): How LimeSDR and Ettus B210 change the market.
+- [Git push to verdict](/blog/git-push-to-verdict): Wiring conformance into CI/CD.
+
+## Optional
+
+- [Sign in](/login): Customer portal sign-in.
+- [Register](/register): Start a free trial.

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AEON Cloud — 3GPP UE Certification Platform</title>
+  <meta name="description" content="AEON Cloud is a cloud-based 3GPP telecom testing platform. Run TTCN-3 certification on real SDR hardware without buying a physical tester." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">AEON Cloud</span>
+      </a>
+      <nav class="nav">
+        <a href="#platform">Platform</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#docs">Docs</a>
+      </nav>
+      <a href="https://aeontest.hyper-wireless.com" class="btn btn-aeontest-login">Login to AeonTest &rarr;</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="badge">
+          <span class="pulse"></span>
+          Now available · TTCN-3 Release 18 test suites
+        </div>
+        <h1 class="hero-title">
+          Cloud-based <span class="text-gradient">3GPP UE</span> certification platform
+        </h1>
+        <p class="hero-subtitle">
+          Build your UE anywhere in the world. Connect securely to AEON Cloud. Run TTCN-3 certification on real SDR hardware and receive AI-powered debugging reports.
+        </p>
+        <p class="hero-differentiator">
+          <strong>No physical tester required.</strong> AEON Cloud is a digital testing box you connect to through your browser — no racks, no maintenance, no CAPEX.
+        </p>
+        <div class="hero-actions">
+          <a href="https://aeontest.hyper-wireless.com" class="btn btn-primary btn-lg">Login to AeonTest &rarr;</a>
+          <a href="#platform" class="btn btn-secondary btn-lg">Explore platform</a>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-label">3GPP</span>
+            <span class="stat-value">Rel 15 – 18</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Uptime</span>
+            <span class="stat-value">99.95% SLA</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Regions</span>
+            <span class="stat-value">EU · US · APAC</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform" class="section">
+      <div class="container">
+        <p class="section-kicker">Platform</p>
+        <h2 class="section-title">Everything a modem team needs, in one managed cloud</h2>
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">📡</div>
+            <h3>Remote TTCN-3 Testing</h3>
+            <p>Upload your UE build, reserve a tester, and execute 3GPP conformance campaigns on real SDR hardware from anywhere.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🤖</div>
+            <h3>AI Telecom Copilot</h3>
+            <p>Analyzes failures, maps TTCN verdicts to 3GPP clauses, suggests fixes, and explains procedures on demand.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📦</div>
+            <h3>Build Repository</h3>
+            <p>Versioned firmware storage with branches, commits, tags, and one-click rollback. zip · tar.gz · Docker · raw firmware.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>Live Execution Dashboard</h3>
+            <p>Watch the running testcase, MSC sequence, verdict stream, and console logs in real time.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📑</div>
+            <h3>Certification Reports</h3>
+            <p>PDF · CSV · JSON · XLSX. Coverage, pass rate, 3GPP traceability, and executive certification summaries.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Enterprise Security</h3>
+            <p>End-to-end encryption, SSO, RBAC, MFA, audit logs, and scoped API tokens. SOC 2 aligned controls.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow" class="section section-alt">
+      <div class="container">
+        <p class="section-kicker">Workflow</p>
+        <h2 class="section-title">From commit to certification in six steps</h2>
+        <div class="workflow">
+          <div class="workflow-step">
+            <span class="step-number">01</span>
+            <h3>Upload build</h3>
+            <p>Push firmware to your build repository over CLI, API, or Web.</p>
+          </div>
+          <div class="workflow-step">
+            <span class="step-number">02</span>
+            <h3>Reserve tester</h3>
+            <p>Schedule an available AEON tester (SDR + RF chamber) in a region.</p>
+          </div>
+          <div class="workflow-step">
+            <span class="step-number">03</span>
+            <h3>Secure tunnel</h3>
+            <p>Your workstation connects via mutual-TLS to the reserved lab.</p>
+          </div>
+          <div class="workflow-step">
+            <span class="step-number">04</span>
+            <h3>Deploy & run</h3>
+            <p>The tester flashes your UE and executes the selected TTCN-3 campaign.</p>
+          </div>
+          <div class="workflow-step">
+            <span class="step-number">05</span>
+            <h3>Live monitor</h3>
+            <p>Stream verdicts, MSCs, and logs. Pause, resume, or cancel any run.</p>
+          </div>
+          <div class="workflow-step">
+            <span class="step-number">06</span>
+            <h3>Report & analyze</h3>
+            <p>Download certification reports. Ask the Copilot why a testcase failed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <p class="section-kicker">Pricing</p>
+        <h2 class="section-title">Plans that scale with your certification program</h2>
+        <div class="pricing">
+          <div class="pricing-card">
+            <h3>Developer</h3>
+            <p class="price">$0<span>/mo</span></p>
+            <p class="plan-desc">For individual engineers exploring 3GPP conformance.</p>
+            <a href="https://aeontest.hyper-wireless.com" class="btn btn-outline">Start free</a>
+            <ul>
+              <li>1 project</li>
+              <li>50 executions / month</li>
+              <li>Shared tester pool</li>
+              <li>PDF reports</li>
+              <li>Community support</li>
+            </ul>
+          </div>
+          <div class="pricing-card featured">
+            <div class="popular-badge">Most popular</div>
+            <h3>Startup</h3>
+            <p class="price">$1,490<span>/mo</span></p>
+            <p class="plan-desc">For product teams shipping certified UE devices.</p>
+            <a href="https://aeontest.hyper-wireless.com" class="btn btn-primary">Start 14-day trial</a>
+            <ul>
+              <li>10 projects</li>
+              <li>1,500 executions / month</li>
+              <li>Priority tester scheduling</li>
+              <li>AI Copilot</li>
+              <li>Full report suite + API</li>
+              <li>Business-hours support</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h3>Enterprise</h3>
+            <p class="price">Custom</p>
+            <p class="plan-desc">Dedicated infrastructure for chipset vendors and OEMs.</p>
+            <a href="https://aeontest.hyper-wireless.com" class="btn btn-outline">Contact sales</a>
+            <ul>
+              <li>Unlimited projects & executions</li>
+              <li>Dedicated tester & SDR pool</li>
+              <li>Private cloud / on-prem option</li>
+              <li>Dedicated TTCN-3 engineer</li>
+              <li>SSO / SAML / audit logs</li>
+              <li>24/7 premium support & SLA</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="docs" class="section section-alt">
+      <div class="container">
+        <p class="section-kicker">Documentation</p>
+        <h2 class="section-title">Get your first test running in under 30 minutes</h2>
+        <p class="section-body">
+          Engineers discover the platform, follow a tutorial, connect an open-source UE to AEON Cloud, and run their first test. Our docs are written for engineers, not marketers.
+        </p>
+        <a href="https://aeontest.hyper-wireless.com" class="btn btn-primary">Open the docs portal</a>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-inner">
+        <h2>Ship certified UEs faster</h2>
+        <p>Join chipset vendors and OEMs using AEON Cloud to shorten certification cycles from months to days.</p>
+        <div class="cta-actions">
+          <a href="https://aeontest.hyper-wireless.com" class="btn btn-primary btn-lg">Login to AeonTest &rarr;</a>
+          <a href="#pricing" class="btn btn-secondary btn-lg">View pricing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">A</span>
+        <span>AEON Cloud</span>
+      </div>
+      <p class="footer-copy">© 2026 AEON Cloud. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#platform">Platform</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#pricing">Pricing</a>
+        <a href="https://aeontest.hyper-wireless.com">AeonTest Login</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
