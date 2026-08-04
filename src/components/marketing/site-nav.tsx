@@ -15,7 +15,7 @@ export function SiteNav() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-8">
-          <Link to="/"><BrandLogo /></Link>
+          <Link to="/" className="inline-block"><BrandLogo className="hyper-animated-logo cursor-pointer" /></Link>
           <nav className="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
             {nav.map((n) => (
               <Link
